@@ -29,7 +29,7 @@
         <a href="<?= base_url('dasboard/hapus_keranjang') ?>">
             <div class="btn btn-danger btn-sm">Hapus Keranjang</div>
         </a>
-        <a href="<?= base_url('dasboard/index') ?>">
+        <a href="<?= base_url('welcome') ?>">
             <div class="btn btn-primary btn-sm">Tambah Produk Lain</div>
         </a>
         <a href="<?= base_url('dasboard/pembayaran') ?>">
