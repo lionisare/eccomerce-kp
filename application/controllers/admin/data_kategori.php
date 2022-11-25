@@ -32,7 +32,7 @@ class Data_kategori extends CI_Controller
         $id              = $this->input->post('kategori_id');
         $nama_kategori   = $this->input->post('nama_kategori');
         $data = array(
-              'nama_kategori' => $nama_kategori
+            'nama_kategori' => $nama_kategori
         );
         $where = array(
             'kategori_id' => $id
