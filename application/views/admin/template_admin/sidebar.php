@@ -18,26 +18,31 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item <?= $this->uri->segment('2') == 'admin_dasboard' ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= base_url('admin/admin_dasboard') ?>">
                     <i class='bx bxs-dashboard'></i>
                     <span>Dashboard</span></a>
             </li>
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item <?= $this->uri->segment('2') == 'data_produk' ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= base_url('admin/data_produk') ?>">
                     <i class='bx bxs-data'></i>
                     <span>Data Produk</span></a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item  <?= $this->uri->segment('2') == 'invoice' ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= base_url('admin/invoice') ?>">
                     <i class='bx bxs-file'></i>
                     <span>Data Pemesanan</span></a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item  <?= $this->uri->segment('2') == 'data_kategori' ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= base_url('admin/data_kategori') ?>">
                     <i class='bx bxs-file'></i>
                     <span>Data Kategori</span></a>
+            </li>
+            <li class="nav-item <?= $this->uri->segment('2') == 'pengaturan' ? 'active' : '' ?>">
+                <a class="nav-link " href="<?= base_url('admin/pengaturan') ?>">
+                    <i class='bx bxs-chip'></i>
+                    <span>Pengaturan</span></a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="#">
