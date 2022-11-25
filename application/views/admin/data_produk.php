@@ -18,7 +18,7 @@
                 <td><?= $no++ ?></td>
                 <td><?= $pdk->nama_brg ?></td>
                 <td><?= $pdk->keterangan ?></td>
-                <td><?= $pdk->kategori ?></td>
+                <td><?= $pdk->nama_kategori ?></td>
                 <td><?= $pdk->harga ?></td>
                 <td><?= $pdk->stok ?></td>
                 <td>
@@ -58,21 +58,27 @@
                         <label for="">Keterangan</label>
                         <input type="text" name="keterangan" class="form-control" required>
                     </div>
+
                     <div class="from-group">
                         <label for="">Kategori</label>
-                        <input type="text" name="kategori" class="form-control" required>
+                        <select name="kategori_id" class="form-control" required>
+                            <?php foreach ($kategoris as $kategori) : ?>
+                                <option value="<?= $kategori->kategori_id ?>"><?= $kategori->nama_kategori ?></option>
+                            <?php endforeach ?>
+                        </select>
                     </div>
+
                     <div class="from-group">
                         <label for="">Harga</label>
-                        <input type="text" name="harga" class="form-control" required>
+                        <input type="number" min="0" name="harga" class="form-control" required>
                     </div>
                     <div class="from-group">
                         <label for="">Stok</label>
-                        <input type="text" name="stok" class="form-control" required>
+                        <input type="number" min="0" name="stok" class="form-control" required>
                     </div>
                     <div class="from-group">
                         <label for="">Gambar Produk</label><br>
-                        <input type="file" name="gambar" class="form-control" required>
+                        <input type="file" name="gambar" accept="image/*" class="form-control" required>
                     </div>
             </div>
             <div class="modal-footer">

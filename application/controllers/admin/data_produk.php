@@ -18,6 +18,7 @@ class Data_produk extends CI_Controller
     public function index()
     {
         $data['produk'] = $this->model_produk->tampil_data()->result();
+        $data['kategoris'] = $this->model_categori->tampil_data()->result();
         $this->load->view('admin/template_admin/header');
         $this->load->view('admin/template_admin/sidebar');
         $this->load->view('admin/data_produk', $data);
@@ -25,12 +26,12 @@ class Data_produk extends CI_Controller
     }
     public function tambah_produk()
     {
-        $nama_brg   = $this->input->post('nama_brg');
-        $keterangan = $this->input->post('keterangan');
-        $kategori   = $this->input->post('kategori');
-        $harga      = $this->input->post('harga');
-        $stok       = $this->input->post('stok');
-        $gambar     = $_FILES['gambar']['name'];
+        $nama_brg    = $this->input->post('nama_brg');
+        $keterangan  = $this->input->post('keterangan');
+        $kategori_id = $this->input->post('kategori_id');
+        $harga       = $this->input->post('harga');
+        $stok        = $this->input->post('stok');
+        $gambar      = $_FILES['gambar']['name'];
         if ($gambar = '') {
         } else {
             $config['upload_path'] = './upload';
@@ -46,10 +47,10 @@ class Data_produk extends CI_Controller
         $data = array(
             'nama_brg' => $nama_brg,
             'keterangan' => $keterangan,
-            'kategori' => $kategori,
             'harga' => $harga,
             'stok' => $stok,
-            'gambar' => $gambar
+            'gambar' => $gambar,
+            'kategori_id' => $kategori_id,
         );
         $this->model_produk->tambah_produk($data, 'tb_produk');
         redirect('admin/data_produk/index');
@@ -59,6 +60,7 @@ class Data_produk extends CI_Controller
     {
         $where = array('id_brg' => $id);
         $data['produk'] = $this->model_produk->edit_produk($where, 'tb_produk')->result();
+        $data['kategoris'] = $this->model_categori->tampil_data()->result();
         $this->load->view('admin/template_admin/header');
         $this->load->view('admin/template_admin/sidebar');
         $this->load->view('admin/edit_produk', $data);
@@ -66,16 +68,16 @@ class Data_produk extends CI_Controller
     }
     public function update()
     {
-        $id         = $this->input->post('id_brg');
-        $nama_brg   = $this->input->post('nama_brg');
-        $keterangan = $this->input->post('keterangan');
-        $kategori   = $this->input->post('kategori');
-        $harga      = $this->input->post('harga');
-        $stok       = $this->input->post('stok');
+        $id             = $this->input->post('id_brg');
+        $nama_brg    = $this->input->post('nama_brg');
+        $keterangan  = $this->input->post('keterangan');
+        $kategori_id = $this->input->post('kategori_id');
+        $harga       = $this->input->post('harga');
+        $stok        = $this->input->post('stok');
         $data = array(
             'nama_brg' => $nama_brg,
             'keterangan' => $keterangan,
-            'kategori' => $kategori,
+            'kategori_id' => $kategori_id,
             'harga' => $harga,
             'stok' => $stok
         );

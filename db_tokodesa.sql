@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2022 at 08:54 AM
+-- Generation Time: Nov 25, 2022 at 09:20 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -165,10 +165,9 @@ DELIMITER ;
 
 CREATE TABLE `tb_produk` (
   `id_brg` int(11) NOT NULL,
-  `kategori_id` int(11) NOT NULL,
+  `kategori_id` int(11) DEFAULT NULL,
   `nama_brg` varchar(120) NOT NULL,
   `keterangan` text NOT NULL,
-  `kategori` varchar(70) NOT NULL,
   `harga` int(11) NOT NULL,
   `stok` int(5) NOT NULL,
   `gambar` text NOT NULL
@@ -178,15 +177,16 @@ CREATE TABLE `tb_produk` (
 -- Dumping data for table `tb_produk`
 --
 
-INSERT INTO `tb_produk` (`id_brg`, `kategori_id`, `nama_brg`, `keterangan`, `kategori`, `harga`, `stok`, `gambar`) VALUES
-(9, 0, 'Kambing', 'Cocok untuk hewan peliharaan', 'Peternakan', 300000, 5, 'kambing.png'),
-(10, 0, 'Sapi', 'Cocok untuk di pelihara', 'Peternakan', 15000000, 3, 'sapi.png'),
-(11, 0, 'Dompet Pria', 'Warna Hitam, Ukuran Sedang', 'UMKM', 50000, 2, 'dompet1.png'),
-(12, 0, 'Tas Wanita', 'Dibuat dari rotan, cocok untuk ke kondangan mantan', 'UMKM', 300000, 9, 'tas2.png'),
-(13, 0, 'Pastel', 'Enak', 'Makanan', 1000, 18, 'pastel.png'),
-(14, 0, 'Pupuk', 'Bagus untuk tanaman', 'Pertanian', 150000, 7, 'pupuk.png'),
-(15, 0, 'Kue', 'Enak', 'Makanan ', 2000, 6, 'kue.png'),
-(16, 0, 'Baju', 'Baju Pria bagus', 'UMKM', 65000, 7, 'baju3.jpeg');
+INSERT INTO `tb_produk` (`id_brg`, `kategori_id`, `nama_brg`, `keterangan`, `harga`, `stok`, `gambar`) VALUES
+(9, 8, 'Kambing', 'Cocok untuk hewan peliharaan', 300000, 5, 'kambing.png'),
+(10, NULL, 'Sapi', 'Cocok untuk di pelihara', 15000000, 3, 'sapi.png'),
+(11, NULL, 'Dompet Pria', 'Warna Hitam, Ukuran Sedang', 50000, 2, 'dompet1.png'),
+(12, NULL, 'Tas Wanita', 'Dibuat dari rotan, cocok untuk ke kondangan mantan', 300000, 9, 'tas2.png'),
+(13, NULL, 'Pastel', 'Enak', 1000, 18, 'pastel.png'),
+(14, NULL, 'Pupuk', 'Bagus untuk tanaman', 150000, 7, 'pupuk.png'),
+(15, NULL, 'Kue', 'Enak', 2000, 6, 'kue.png'),
+(16, NULL, 'Baju', 'Baju Pria bagus', 65000, 7, 'baju3.jpeg'),
+(17, 7, 'sdfsdaf', 'dasfsadf', 123, 50, 'WhatsApp_Image_2022-11-20_at_09_33_50.jpeg');
 
 -- --------------------------------------------------------
 
@@ -295,7 +295,7 @@ ALTER TABLE `tb_pesanan`
 -- AUTO_INCREMENT for table `tb_produk`
 --
 ALTER TABLE `tb_produk`
-  MODIFY `id_brg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_brg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `tb_user`

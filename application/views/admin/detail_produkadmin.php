@@ -21,7 +21,7 @@
                             </tr>
                             <tr>
                                 <td>Kategori</td>
-                                <td><strong><?= $pdk->kategori ?></strong></td>
+                                <td><strong><?= $pdk->nama_kategori ?></strong></td>
                             </tr>
                             <tr>
                                 <td>Stok</td>
