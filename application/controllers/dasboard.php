@@ -13,6 +13,8 @@ class Dasboard extends CI_Controller
           </div>');
             redirect('auth/login');
         }
+
+        $this->load->model('Model_pengaturan', 'model_pengaturan');
     }
     public function tambah_keranjang($id)
     {
@@ -40,9 +42,10 @@ class Dasboard extends CI_Controller
     }
     public function pembayaran()
     {
+        $data['whatsapp'] = $this->model_pengaturan->get_whatsapp();
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
-        $this->load->view('admin/pembayaran');
+        $this->load->view('admin/pembayaran', $data);
         $this->load->view('admin/template/footer');
     }
     public function proses_pesanan()
