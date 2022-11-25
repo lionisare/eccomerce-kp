@@ -17,8 +17,8 @@ class Konfirmasi extends CI_Controller
         $gambar     = $_FILES['gambar']['name'];
         if ($gambar = '') {
         } else {
-            $config['upload_path'] = '.upload/konfirmasi/';
-            $config['allowed_types'] = 'jpg|png|jpeg';
+            $config['upload_path'] = './upload/konfirmasi';
+            $config['allowed_types'] = '*';
 
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('gambar')) {

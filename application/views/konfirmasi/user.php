@@ -4,7 +4,7 @@
         </div>
         <div class="col-md-8">
             <h4>Konfirmasi Pembayaran</h4>
-            <form action="<?= base_url() . '/Konfirmasi/tambah_konfirmasi'; ?>" method="post">
+            <form action="<?= base_url() . '/Konfirmasi/tambah_konfirmasi'; ?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="">Nama</label>
                     <input class="form-control" type="text" name="nama" id="" placeholder="Nama sesuai rekening" required>
