@@ -12,6 +12,10 @@
                             <label>Nomor Whatsapp <small>Contoh: 62859873210505</small></label>
                             <input type="number" name="no_whatsapp" class="form-control" value="<?= $whatsapp['nilai'] ?>" required>
                         </div>
+                        <div class="form-group">
+                            <label>Pesan</label>
+                            <textarea type="number" name="message_whatsapp" class="form-control" required><?= $whatsapp_message['nilai'] ?></textarea>
+                        </div>
                     </form>
                 </div>
                 <div class="card-footer">

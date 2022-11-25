@@ -1,31 +1,31 @@
 <?php
 class Model_pengaturan extends CI_Model
 {
-    private $whatsapp_key = 'WHATSAPP';
     private $table = 'tb_pengaturan';
-    public function get_whatsapp()
+
+    public function get($key)
     {
         $get = $this->db->select("*")
             ->from($this->table)
-            ->where('kunci', $this->whatsapp_key)->get();
+            ->where('kunci', $key)->get();
 
         if ($get->num_rows() < 1) {
-            $whatsapp = [
-                'kunci' => $this->whatsapp_key,
+            $result = [
+                'kunci' => $key,
                 'nilai' => ''
             ];
-            $this->db->insert($this->table, $whatsapp);
-            $whatsapp['id'] = $this->db->insert_id();
+            $this->db->insert($this->table, $result);
+            $result['id'] = $this->db->insert_id();
         } else {
-            $whatsapp = $get->row_array();
+            $result = $get->row_array();
         }
-        return $whatsapp;
+        return $result;
     }
 
-    public function set_whatsapp($nomor_whatsapp)
+    public function set($key, $value)
     {
-        $result = $this->db->where('kunci', $this->whatsapp_key)
-            ->update($this->table, ['nilai' => $nomor_whatsapp]);
+        $result = $this->db->where('kunci', $key)
+            ->update($this->table, ['nilai' => $value]);
         return $result;
     }
 }

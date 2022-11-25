@@ -49,7 +49,7 @@
                 </div>
                 <br>
                 <button type="submit" class="btn btn-primary btn-sm">Pesan</button>
-                <a class="btn btn-success btn-sm" href="https://api.whatsapp.com/send?phone=<?= $whatsapp['nilai'] ?>&text=" target="_blank">Pesan Via WA</a>
+                <a class="btn btn-success btn-sm" href="https://api.whatsapp.com/send?phone=<?= $whatsapp['nilai'] ?>&text=<?= $whatsapp_message['nilai'] ?>" target="_blank">Pesan Via WA</a>
             </form>
         <?php
                 } else {

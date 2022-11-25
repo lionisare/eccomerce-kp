@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2022 at 08:41 AM
+-- Generation Time: Nov 25, 2022 at 08:54 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -98,7 +98,8 @@ CREATE TABLE `tb_pengaturan` (
 --
 
 INSERT INTO `tb_pengaturan` (`id`, `kunci`, `nilai`) VALUES
-(2, 'WHATSAPP', '6285798132505');
+(2, 'WHATSAPP', '6285798132506'),
+(3, 'WHATSAPP_MESSAGE', 'Saya ingin transaksi via whatsapp');
 
 -- --------------------------------------------------------
 
@@ -282,7 +283,7 @@ ALTER TABLE `tb_konfirmasi`
 -- AUTO_INCREMENT for table `tb_pengaturan`
 --
 ALTER TABLE `tb_pengaturan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tb_pesanan`

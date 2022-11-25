@@ -42,7 +42,8 @@ class Dasboard extends CI_Controller
     }
     public function pembayaran()
     {
-        $data['whatsapp'] = $this->model_pengaturan->get_whatsapp();
+        $data['whatsapp'] = $this->model_pengaturan->get('WHATSAPP');
+        $data['whatsapp_message'] = $this->model_pengaturan->get('WHATSAPP_MESSAGE');
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
         $this->load->view('admin/pembayaran', $data);

@@ -20,7 +20,8 @@ class Pengaturan extends CI_Controller
 
     public function index()
     {
-        $data['whatsapp'] = $this->model_pengaturan->get_whatsapp();
+        $data['whatsapp'] = $this->model_pengaturan->get('WHATSAPP');
+        $data['whatsapp_message'] = $this->model_pengaturan->get('WHATSAPP_MESSAGE');
         $this->load->view('admin/template_admin/header');
         $this->load->view('admin/template_admin/sidebar');
         $this->load->view('admin/pengaturan', $data);
@@ -30,8 +31,10 @@ class Pengaturan extends CI_Controller
     public function simpan_whatsapp()
     {
         $no_whatsapp   = $this->input->post('no_whatsapp');
-        $result = $this->model_pengaturan->set_whatsapp($no_whatsapp);
-        if ($result) {
+        $message_whatsapp   = $this->input->post('message_whatsapp');
+        $no = $this->model_pengaturan->set('WHATSAPP', $no_whatsapp);
+        $message = $this->model_pengaturan->set('WHATSAPP_MESSAGE', $message_whatsapp);
+        if ($no && $message) {
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                 Berhasil Menyimpan data
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
