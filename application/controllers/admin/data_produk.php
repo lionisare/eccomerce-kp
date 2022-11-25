@@ -47,10 +47,10 @@ class Data_produk extends CI_Controller
         $data = array(
             'nama_brg' => $nama_brg,
             'keterangan' => $keterangan,
+            'kategori_id' => $kategori_id,
             'harga' => $harga,
             'stok' => $stok,
             'gambar' => $gambar,
-            'kategori_id' => $kategori_id,
         );
         $this->model_produk->tambah_produk($data, 'tb_produk');
         redirect('admin/data_produk/index');
@@ -68,7 +68,7 @@ class Data_produk extends CI_Controller
     }
     public function update()
     {
-        $id             = $this->input->post('id_brg');
+        $id          = $this->input->post('id_brg');
         $nama_brg    = $this->input->post('nama_brg');
         $keterangan  = $this->input->post('keterangan');
         $kategori_id = $this->input->post('kategori_id');
