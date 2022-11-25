@@ -23,7 +23,7 @@
                 </div>
                 <div>
                     <label for="">No Telepon</label>
-                    <input class="form-control" type="text" name="no_telp" id="" placeholder="No Telpon Aktif/WA" required>
+                    <input class="form-control" type="number" name="no_telp" id="" placeholder="No Telpon Aktif/WA" required>
                 </div>
                 <div>
                     <label for="">Jasa Pengiriman</label>
