@@ -19,7 +19,7 @@ class Model_categori extends CI_Model
     // }
     public function tampil_data()
     {
-        return $this->db->get('tb_kategori');
+        return $this->db->order_by('nama_kategori')->get('tb_kategori');
     }
     public function tambah_kategori($data, $table)
     {

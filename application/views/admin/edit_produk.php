@@ -11,9 +11,14 @@
                 <input type="hidden" name="id_brg" class="form-control" value="<?= $pdk->id_brg ?>">
                 <input type="text" name="keterangan" class="form-control" value="<?= $pdk->keterangan ?>">
             </div>
-            <div class="form-group">
-                <label>Kategori</label>
-                <input type="text" name="kategori" class="form-control" value="<?= $pdk->kategori ?>">
+            <div class="from-group">
+                <label for="">Kategori</label>
+                <select name="kategori_id" class="form-control" required>
+                    <option value="">Pilih Kategori</option>
+                    <?php foreach ($kategoris as $kategori) : ?>
+                        <option value="<?= $kategori->kategori_id ?>" <?= $pdk->kategori_id == $kategori->kategori_id ? 'selected' : '' ?>><?= $kategori->nama_kategori ?></option>
+                    <?php endforeach ?>
+                </select>
             </div>
             <div class="form-group">
                 <label>Harga</label>

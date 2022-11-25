@@ -4,7 +4,10 @@ class Model_produk extends CI_Model
 {
     public function tampil_data()
     {
-        return $this->db->get('tb_produk');
+        return $this->db->select("a.*, b.nama_kategori")
+            ->from('tb_produk as a')
+            ->join('tb_kategori as b',  'a.kategori_id = b.kategori_id', 'left')
+            ->get();
     }
 
     public function tambah_produk($data, $table)
@@ -27,9 +30,11 @@ class Model_produk extends CI_Model
     }
     public function find($id)
     {
-        $result = $this->db->where('id_brg', $id)
-            ->limit(1)
-            ->get('tb_produk');
+        $result = $this->db->select("a.*, b.nama_kategori")
+            ->from('tb_produk as a')
+            ->join('tb_kategori as b',  'a.kategori_id = b.kategori_id', 'left')
+            ->where('a.id_brg', $id)
+            ->get();
         if ($result->num_rows() > 0) {
             return $result->row();
         } else {
@@ -38,7 +43,11 @@ class Model_produk extends CI_Model
     }
     public function detail_produk($id_brg)
     {
-        $result = $this->db->where('id_brg', $id_brg)->get('tb_produk');
+        $result =  $this->db->select("a.*, b.nama_kategori")
+            ->from('tb_produk as a')
+            ->join('tb_kategori as b',  'a.kategori_id = b.kategori_id', 'left')
+            ->where('a.id_brg', $id_brg)
+            ->get();
         if ($result->num_rows() > 0) {
             return $result->result();
         } else {
@@ -47,7 +56,11 @@ class Model_produk extends CI_Model
     }
     public function ambil_id_produk($id_brg)
     {
-        $result = $this->db->where('id_brg', $id_brg)->get('tb_produk');
+        $result =  $this->db->select("a.*, b.nama_kategori")
+            ->from('tb_produk as a')
+            ->join('tb_kategori as b',  'a.kategori_id = b.kategori_id', 'left')
+            ->where('a.id_brg', $id_brg)
+            ->get();
         if ($result->num_rows() > 0) {
             return $result->result();
         } else {
