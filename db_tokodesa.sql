@@ -1,21 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2022 at 07:33 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.1
+-- Generation Time: Nov 25, 2022 at 08:41 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `db_tokodesa`
@@ -86,6 +80,25 @@ INSERT INTO `tb_konfirmasi` (`id`, `nama`, `dari_bank`, `ke_bank`, `jumlah`, `ga
 (19, 'SOMIN SANTOSO', 'BJB', 'BRI', '200000', ''),
 (20, 'a', 'BJB', 'BJB', '200000', ''),
 (21, 'AHMAD', 'BRI', 'BJB', '200000', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_pengaturan`
+--
+
+CREATE TABLE `tb_pengaturan` (
+  `id` int(11) NOT NULL,
+  `kunci` varchar(255) NOT NULL,
+  `nilai` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_pengaturan`
+--
+
+INSERT INTO `tb_pengaturan` (`id`, `kunci`, `nilai`) VALUES
+(2, 'WHATSAPP', '6285798132505');
 
 -- --------------------------------------------------------
 
@@ -220,6 +233,12 @@ ALTER TABLE `tb_konfirmasi`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tb_pengaturan`
+--
+ALTER TABLE `tb_pengaturan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tb_pesanan`
 --
 ALTER TABLE `tb_pesanan`
@@ -260,6 +279,12 @@ ALTER TABLE `tb_konfirmasi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
+-- AUTO_INCREMENT for table `tb_pengaturan`
+--
+ALTER TABLE `tb_pengaturan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `tb_pesanan`
 --
 ALTER TABLE `tb_pesanan`
@@ -277,7 +302,3 @@ ALTER TABLE `tb_produk`
 ALTER TABLE `tb_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
