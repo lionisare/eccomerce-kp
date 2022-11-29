@@ -9,18 +9,19 @@
                 <th>Asal Bank</th>
                 <th>Tujuan Bank</th>
                 <th>Jumlah</th>
+                <th>Aksi</th>
             </tr>
             <?php foreach ($konfirmasi as $konf) : ?>
                 <tr>
                     <td><?= $konf->id_konfirmasi ?></td>
                     <td><?= $konf->nama ?></td>
-                    <td><?= $konf->id_pesanan ?></td>
+                    <td><?= $konf->id ?></td>
                     <td><?= $konf->dari_bank ?></td>
                     <td><?= $konf->ke_bank ?></td>
                     <td><?= $konf->jumlah ?></td>
-                    <!-- <td>
-                        <?= anchor('admin/invoice/detail/' . $inv->id_konfirmasi, '<div class="btn btn-info btn-sm">Detail</div>') ?>
-                    </td> -->
+                    <td>
+                        <?= anchor('admin/konfirmasi/detail_konfirmasi/' . $konf->id_konfirmasi, '<div class="btn btn-info btn-sm">Detail</div>') ?>
+                    </td>
                 </tr>
             <?php endforeach ?>
         </thead>
