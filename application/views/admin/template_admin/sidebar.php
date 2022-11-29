@@ -44,8 +44,8 @@
                     <i class='bx bxs-chip'></i>
                     <span>Pengaturan</span></a>
             </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="#">
+            <li class="nav-item <?= $this->uri->segment('2') == 'konfirmasi' ? 'active' : '' ?>">
+                <a class="nav-link" href="<?= base_url('admin/konfirmasi') ?>">
                     <i class='bx bxs-wallet'></i>
                     <span>Konfirmasi Pembayaran</span>
                 </a>
