@@ -3,13 +3,26 @@
     <table class="table table-bordered">
         <thead class="thead-dark">
             <tr>
-                <th>Id Pemesanan</th>
-                <th>Nama Pemesan</th>
-                <th>Alamat Pengiriman</th>
-                <th>Tanggal Pemesanan</th>
-                <th>Batas Pembayaran</th>
-                <th>Aksi</th>
+                <th>Id Konfirmasi</th>
+                <th>Nama</th>
+                <th>ID Pesanan</th>
+                <th>Asal Bank</th>
+                <th>Tujuan Bank</th>
+                <th>Jumlah</th>
             </tr>
+            <?php foreach ($konfirmasi as $konf) : ?>
+                <tr>
+                    <td><?= $konf->id_konfirmasi ?></td>
+                    <td><?= $konf->nama ?></td>
+                    <td><?= $konf->id_pesanan ?></td>
+                    <td><?= $konf->dari_bank ?></td>
+                    <td><?= $konf->ke_bank ?></td>
+                    <td><?= $konf->jumlah ?></td>
+                    <!-- <td>
+                        <?= anchor('admin/invoice/detail/' . $inv->id_konfirmasi, '<div class="btn btn-info btn-sm">Detail</div>') ?>
+                    </td> -->
+                </tr>
+            <?php endforeach ?>
         </thead>
     </table>
 </div>
