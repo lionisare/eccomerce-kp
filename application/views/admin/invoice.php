@@ -12,13 +12,13 @@
             </tr>
             <?php foreach ($invoice as $inv) : ?>
                 <tr>
-                    <td><?= $inv->id ?></td>
+                    <td><?= $inv->id_invoice ?></td>
                     <td><?= $inv->nama ?></td>
                     <td><?= $inv->alamat ?></td>
                     <td><?= $inv->tgl_pesan ?></td>
                     <td><?= $inv->batas_bayar ?></td>
                     <td>
-                        <?= anchor('admin/invoice/detail/' . $inv->id, '<div class="btn btn-info btn-sm">Detail</div>') ?>
+                        <?= anchor('admin/invoice/detail/' . $inv->id_invoice, '<div class="btn btn-info btn-sm">Detail</div>') ?>
                     </td>
                 </tr>
             <?php endforeach ?>

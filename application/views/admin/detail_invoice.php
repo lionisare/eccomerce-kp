@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h4>Detail Pemesanan <div class="btn btn-success btn-sm">No. Invoice: <?= $invoice->id ?></div>
+    <h4>Detail Pemesanan <div class="btn btn-success btn-sm">No. Invoice: <?= $invoice->id_invoice ?></div>
     </h4>
     <table class="table table-bordered">
         <thead class="thead-dark">

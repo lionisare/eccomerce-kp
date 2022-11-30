@@ -67,4 +67,16 @@ class Model_produk extends CI_Model
             return false;
         }
     }
+    public function hitungdata()
+    {
+        $query = $this->db->get('tb_produk');
+        if($query->num_rows()>0)
+        {
+            return $query->num_rows();
+        }
+        else
+        {
+            return 0;
+        }
+    }
 }

@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="card">
         <div class="card-header">
-            <h4>Detail Produk</h4>
+            <h4>Detail konfirmasi Pembayaran</h4>
         </div>
         <div class="card-body">
 

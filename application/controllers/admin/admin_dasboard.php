@@ -17,9 +17,13 @@ class Admin_dasboard extends CI_Controller
     }
     public function index()
     {
+        $data['jumlahpdk'] = $this->model_produk->hitungdata();
+        $data['jumlahuser'] = $this->model_auth->hitungdatauser();
+        $data['jumlahpesanan'] = $this->model_invoice->hitungdatapesanan();
+
         $this->load->view('admin/template_admin/header');
         $this->load->view('admin/template_admin/sidebar');
-        $this->load->view('admin/admin_dasboard');
+        $this->load->view('admin/admin_dasboard', $data);
         $this->load->view('admin/template_admin/footer');
     }
 }

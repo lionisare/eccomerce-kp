@@ -17,4 +17,16 @@ class Model_auth extends CI_Model
             return array();
         }
     }
+    public function hitungdatauser()
+    {
+        $query = $this->db->get('tb_user');
+        if($query->num_rows()>0)
+        {
+            return $query->num_rows();
+        }
+        else
+        {
+            return 0;
+        }
+    }
 }
