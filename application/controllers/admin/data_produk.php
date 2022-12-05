@@ -53,6 +53,12 @@ class Data_produk extends CI_Controller
             'gambar' => $gambar,
         );
         $this->model_produk->tambah_produk($data, 'tb_produk');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            Berhasil tambah produk
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
         redirect('admin/data_produk/index');
     }
 
@@ -85,12 +91,24 @@ class Data_produk extends CI_Controller
             'id_brg' => $id
         );
         $this->model_produk->update_data($where, $data, 'tb_produk');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            Berhasil update produk
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
         redirect('admin/data_produk/index');
     }
     public function delete($id)
     {
         $where = array('id_brg' => $id);
         $this->model_produk->delete_data($where, 'tb_produk');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            Berhasil delete produk
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
         redirect('admin/data_produk/index');
     }
     public function detail($id)

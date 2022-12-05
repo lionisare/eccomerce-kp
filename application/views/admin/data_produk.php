@@ -35,6 +35,7 @@
                 </td>
             </tr>
         <?php endforeach; ?>
+        <?= $this->session->flashdata('pesan') ?>
     </table>
 </div>
 

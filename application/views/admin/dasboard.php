@@ -13,6 +13,7 @@
                 <img src="<?= base_url('assets/img/slider2.jpg') ?>" class="d-block w-100" alt="...">
             </div>
         </div>
+        <?= $this->session->flashdata('pesan') ?>
         <a class="carousel-control-prev" role="button" href="#carouselExampleIndicators" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>

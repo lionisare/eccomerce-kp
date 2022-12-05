@@ -48,6 +48,12 @@ class Konfirmasi extends CI_Controller
             'gambar' => $gambar
         );
         $this->model_konfirmasi->konfirmasi_user($data, 'tb_konfirmasi');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            Berhasil melakukan konfirmasi pembayaran
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
         redirect('welcome');
     }
 }

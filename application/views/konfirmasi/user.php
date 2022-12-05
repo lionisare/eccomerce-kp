@@ -19,7 +19,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Jumlah</label>
-                    <input class="form-control" type="text" name="jumlah" id="" placeholder="jumlah uang yang di transfer" required>
+                    <input class="form-control" type="number" name="jumlah" id="" placeholder="jumlah uang yang di transfer" required>
                 </div>
                 <div class="form-group">
                     <label for="">Foto Bukti Transaksi</label><br>

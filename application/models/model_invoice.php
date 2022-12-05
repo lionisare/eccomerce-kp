@@ -54,16 +54,22 @@ class Model_invoice extends CI_Model
             return false;
         }
     }
-     public function hitungdatapesanan()
+    public function hitungdatapesanan()
     {
         $query = $this->db->get('tb_invoices');
-        if($query->num_rows()>0)
-        {
+        if ($query->num_rows() > 0) {
             return $query->num_rows();
-        }
-        else
-        {
+        } else {
             return 0;
+        }
+    }
+    public function ambil_id_saja($id_invoice)
+    {
+        $result = $this->db->where('id_invoice', $id_invoice)->limit(1)->get('tb_invoices');
+        if ($result->num_rows() > 0) {
+            return $result->row();
+        } else {
+            return false;
         }
     }
 }
