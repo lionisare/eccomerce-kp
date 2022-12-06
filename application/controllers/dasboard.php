@@ -38,6 +38,12 @@ class Dasboard extends CI_Controller
     public function hapus_keranjang()
     {
         $this->cart->destroy();
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            Berhasil hapus keranjang
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
         redirect('welcome/index');
     }
     public function pembayaran()

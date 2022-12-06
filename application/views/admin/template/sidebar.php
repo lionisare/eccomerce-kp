@@ -1,61 +1,108 @@
-<body id="page-top">
-
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-                <!-- End of Topbar -->
-                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                    <a class="navbar-brand" href="<?= base_url('welcome') ?>">TOKO WANGUNSARI</a>
+<body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="<?= base_url('welcome') ?>">Toko Wangunsari</a>
                     <button class=" navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span class=""> </span>
                     </button>
-
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
+                        <ul class="navbar-nav">
+                            <li class="nav-item <?= $this->uri->segment('1') == 'welcome' ? 'active' : '' ?>">
                                 <a class="nav-link" href="<?= base_url('welcome') ?>">Home<span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?= base_url('Konfirmasi/proses_konfirmasi') ?>">Konfirmasi Pembayaran</a>
-                            </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                                    Kategori
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="<?= base_url('categori/pertanian') ?>">Pertanian</a>
-                                    <a class="dropdown-item" href="<?= base_url('categori/peternakan') ?>">Perternakan</a>
-                                    <a class="dropdown-item" href="<?= base_url('categori/oleholeh') ?>">Makanan & Minuman</a>
-                                    <a class="dropdown-item" href="<?= base_url('categori/umkm') ?>">UMKM</a>
-                                </div>
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Kategori<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<?= base_url('categori/pertanian') ?>">Pertanian</a></li>
+                                    <li><a href="<?= base_url('categori/peternakan') ?>">Peternakan</a></li>
+                                    <li><a href="<?= base_url('categori/oleholeh') ?>">Makanan & Minuman</a></li>
+                                    <li><a href="<?= base_url('categori/umkm') ?>">UMKM</a></li>
+                                </ul>
                             </li>
-                            <div class="navbar">
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li>
+                            <li class="nav-item <?= $this->uri->segment('2') == 'tampil_produk' ? 'active' : '' ?>">
+                                <a class="nav-link" href="<?= base_url('tampil_produk/tampil_produk') ?>">Produk</a>
+                            </li>
+                            <li class="nav-item <?= $this->uri->segment('3') == 'proses_konfirmasi' ? 'active' : '' ?>">
+                                <a class="nav-link" href="<?= base_url('konfirmasi/proses_konfirmasi') ?>">Konfirmasi Pembayaran</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= base_url('dasboard/detail_keranjang') ?>">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                                         <?php
                                         $keranjang = '<i class= "bx bxs-cart" >: </i>' . $this->cart->total_items() .  ''
                                         ?>
                                         <?= anchor('dasboard/detail_keranjang', $keranjang) ?>
-                                    </li>
-                                </ul>
-                                <!-- login -->
-                                <div class="topbar-divider d-none d-sm-block"></div>
-                                <ul class="nav navbar-nav navbar-right">
-                                    <?php if ($this->session->userdata('username')) {
-                                    ?>
-                                        <li>Selamat Datang <?= $this->session->userdata('username') ?></li>
-                                        <li class="ml-3"><?= anchor('auth/logout', 'Logout');  ?></li>
-                                    <?php  } else { ?>
-                                        <li><?= anchor('auth/login', 'Login'); ?></li>
-                                    <?php }  ?>
-                                </ul>
-                            </div>
+                                        <g>
+                                            <g>
+                                                <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                                          c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                                          C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                                          c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                                          C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                                          c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                        <g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <form class="form-inline">
+                                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                                    <i class="fa fa-user" aria-hidden="true" href=""></i>
+                                </button>
+                                <?php if ($this->session->userdata('username')) {
+                                ?>
+                                    <li><?= $this->session->userdata('username') ?></li>
+                                    <li class="ml-3"><?= anchor('auth/logout', 'logout');  ?></li>
+                                <?php  } else { ?>
+                                    <li><?= anchor('auth/login', 'Login'); ?></li>
+                                <?php }  ?>
+                            </form>
                         </ul>
                     </div>
                 </nav>
             </div>
+        </header>
+        <!-- end header section -->

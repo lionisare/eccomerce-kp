@@ -24,6 +24,7 @@ class Welcome extends CI_Controller
 		$data['produk'] = $this->model_produk->tampil_data()->result();
 		$this->load->view('admin/template/header');
 		$this->load->view('admin/template/sidebar');
+		$this->load->view('admin/template/section');
 		$this->load->view('admin/dasboard', $data);
 		$this->load->view('admin/template/footer');
 	}
