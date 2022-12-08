@@ -24,11 +24,10 @@
                                     <h3>Menu</h3>
                                     <ul>
                                        <li><a href="<?= base_url('welcome') ?>">Home</a></li>
-                                       <li><a href="#">Produk</a></li>
-                                       <li><a href="#">Kategori</a></li>
-                                       <li><a href="#">Konfirmasi Pembayaran</a></li>
-                                       <li><a href="#">Keranjang</a></li>
-                                       <li><a href="#">Account</a></li>
+                                       <li><a href="<?= base_url('tampil_produk/tampil_produk') ?>">Produk</a>
+                                       </li>
+                                       <li><a href="<?= base_url('konfirmasi/proses_konfirmasi') ?>">Konfirmasi Pembayaran</a></li>
+                                       <li><a href="<?= base_url('dasboard/detail_keranjang') ?>">Keranjang</a></li>
                                     </ul>
                                  </div>
                               </div>
@@ -41,8 +40,11 @@
                                  <p>Silakan memberi saran yang dapat membangaun UMKM dari Desa Wangunsari</p>
                               </div>
                               <div class="form_sub">
-                                 <form>
+                                 <form action="<?= base_url() . 'saran/index'; ?>" method="post">
                                     <fieldset>
+                                       <div class="field">
+                                          <input type="text" placeholder="Masukan nama anda" name="nama" />
+                                       </div>
                                        <div class="field">
                                           <input type="text" placeholder="Masukan saran" name="saran" />
                                        </div>
@@ -59,7 +61,7 @@
             <!-- footer end -->
          </footer>
          <div class="cpy_">
-            <p class="mx-auto">© 2022 Created By <a href="#">belum isi</a><br>
+            <p class="mx-auto">© 2022<a href="#"></a><br>
             </p>
          </div>
          <!-- jQery -->

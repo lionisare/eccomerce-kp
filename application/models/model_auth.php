@@ -20,13 +20,14 @@ class Model_auth extends CI_Model
     public function hitungdatauser()
     {
         $query = $this->db->get('tb_user');
-        if($query->num_rows()>0)
-        {
+        if ($query->num_rows() > 0) {
             return $query->num_rows();
-        }
-        else
-        {
+        } else {
             return 0;
         }
+    }
+    public function tambah_saran($data, $table)
+    {
+        $this->db->insert($table, $data);
     }
 }

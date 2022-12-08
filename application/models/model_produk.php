@@ -70,13 +70,24 @@ class Model_produk extends CI_Model
     public function hitungdata()
     {
         $query = $this->db->get('tb_produk');
-        if($query->num_rows()>0)
-        {
+        if ($query->num_rows() > 0) {
             return $query->num_rows();
-        }
-        else
-        {
+        } else {
             return 0;
         }
+    }
+    public function tampil_saran()
+    {
+        $result = $this->db->get('tb_saran');
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return false;
+        }
+    }
+    public function delete_saran($where, $table)
+    {
+        $this->db->where($where);
+        $this->db->delete($table);
     }
 }
