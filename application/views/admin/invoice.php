@@ -2,6 +2,7 @@
     <h3>Data Pemesanan</h3>
     <table class="table table-bordered">
         <thead class="thead-dark">
+            <?= $this->session->flashdata('pesan') ?>
             <tr>
                 <th>Id Pemesanan</th>
                 <th>Nama Pemesan</th>
@@ -19,6 +20,7 @@
                     <td><?= $inv->batas_bayar ?></td>
                     <td>
                         <?= anchor('admin/invoice/detail/' . $inv->id_invoice, '<div class="btn btn-info btn-sm">Detail</div>') ?>
+                        <?= anchor('admin/invoice/hapus/' . $inv->id_invoice, '<div class="btn btn-danger btn-sm">Hapus</div>') ?>
                     </td>
                 </tr>
             <?php endforeach ?>

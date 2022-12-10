@@ -3,7 +3,7 @@
         <div class="container">
             <div class="heading_container heading_center">
                 <h2>
-                    Categori <span></span>
+                    Kategori <span></span>
                 </h2>
             </div>
             <div class="row text-center mt-4">

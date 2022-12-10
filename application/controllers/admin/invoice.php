@@ -32,4 +32,16 @@ class Invoice extends CI_Controller
         $this->load->view('admin/detail_invoice', $data);
         $this->load->view('admin/template_admin/footer');
     }
+    public function hapus($id)
+    {
+        $where = array('id_invoice' => $id);
+        $this->model_produk->delete_data($where, 'tb_invoices');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            Berhasil delete pesanan
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+        redirect('admin/invoice');
+    }
 }

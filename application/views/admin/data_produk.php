@@ -22,15 +22,15 @@
                 <td><?= $pdk->harga ?></td>
                 <td><?= $pdk->stok ?></td>
                 <td>
-                    <?= anchor('admin/data_produk/detail/' . $pdk->id_brg, '<div class="btn btn-success btn-sm"><i class="bx bx-detail"></i>
+                    <?= anchor('admin/data_produk/detail/' . $pdk->id_brg, '<div class="btn btn-success btn-sm">Detail
                     </div>') ?>
                 </td>
                 <td>
-                    <?= anchor('admin/data_produk/edit/' . $pdk->id_brg, '<div class="btn btn-warning btn-sm"><i class="bx bxs-edit" ></i>
+                    <?= anchor('admin/data_produk/edit/' . $pdk->id_brg, '<div class="btn btn-warning btn-sm">Edit
                     </div>') ?>
                 </td>
                 <td>
-                    <?= anchor('admin/data_produk/delete/' . $pdk->id_brg, '<div class="btn btn-danger btn-sm"><i class="bx bxs-trash"></i>
+                    <?= anchor('admin/data_produk/delete/' . $pdk->id_brg, '<div class="btn btn-danger btn-sm">Hapus
                     </div>') ?>
                 </td>
             </tr>
