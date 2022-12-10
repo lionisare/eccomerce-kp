@@ -13,13 +13,13 @@
                             <li class="nav-item <?= $this->uri->segment('1') == 'welcome' ? 'active' : '' ?>">
                                 <a class="nav-link" href="<?= base_url('welcome') ?>">Home<span class="sr-only">(current)</span></a>
                             </li>
+                            <?php $kategori = $this->model_categori->ambil_kategori(); ?>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Kategori<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<?= base_url('categori/pertanian') ?>">Pertanian</a></li>
-                                    <li><a href="<?= base_url('categori/peternakan') ?>">Peternakan</a></li>
-                                    <li><a href="<?= base_url('categori/oleholeh') ?>">Makanan & Minuman</a></li>
-                                    <li><a href="<?= base_url('categori/umkm') ?>">UMKM</a></li>
+                                    <?php foreach ($kategori as $key => $values) { ?>
+                                        <li><a href="<?= base_url('categori/tampil_produk_kategori/' . $values->kategori_id) ?>"><?= $values->nama_kategori ?></a></li>
+                                    <?php } ?>
                                 </ul>
                             </li>
                             <li class="nav-item <?= $this->uri->segment('2') == 'tampil_produk' ? 'active' : '' ?>">

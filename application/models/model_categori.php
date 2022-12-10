@@ -1,22 +1,6 @@
 <?php
 class Model_categori extends CI_Model
 {
-    public function data_peternakan()
-    {
-        return $this->db->get_where("tb_produk", array('kategori' => 'peternakan'));
-    }
-    public function data_pertanian()
-    {
-        return $this->db->get_where("tb_produk", array('kategori' => 'pertanian'));
-    }
-    public function data_makanan()
-    {
-        return $this->db->get_where("tb_produk", array('kategori' => 'makanan'));
-    }
-    public function data_umkm()
-    {
-        return $this->db->get_where("tb_produk", array('kategori' => 'umkm'));
-    }
     public function tampil_data()
     {
         return $this->db->order_by('nama_kategori')->get('tb_kategori');
@@ -38,5 +22,27 @@ class Model_categori extends CI_Model
     {
         $this->db->where($where);
         $this->db->delete($table);
+    }
+    public function ambil_kategori()
+    {
+        $this->db->select('*');
+        $this->db->from('tb_kategori');
+        $this->db->order_by('kategori_id', 'nama_kategori');
+        return $this->db->get()->result();
+    }
+    public function kategori_produk($kategori_id)
+    {
+        $this->db->select('*');
+        $this->db->from('tb_kategori');
+        $this->db->order_by('kategori_id', $kategori_id);
+        return $this->db->get()->row();
+    }
+    public function ambil_id_kategori($kategori_id)
+    {
+        $this->db->select('*');
+        $this->db->from('tb_produk');
+        $this->db->join('tb_kategori', 'tb_kategori.kategori_id = tb_produk.kategori_id', 'left');
+        $this->db->where('tb_produk.kategori_id', $kategori_id);
+        return $this->db->get()->result();
     }
 }
