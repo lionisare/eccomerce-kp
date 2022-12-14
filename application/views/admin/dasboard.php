@@ -9,7 +9,7 @@
             <div class="row">
                 <?php foreach ($produk as $pdk) : ?>
                     <div class="col-sm-6 col-md-4 col-lg-4">
-                        <div class="card ml-3 mb-3 ">
+                        <div class="card ml-3 mb-2 ">
                             <div class="card-body p-0">
                                 <img src="<?= base_url() . '/upload/' . $pdk->gambar ?>" class="card-img-top" alt="..." style="height: 150px; object-fit: cover; object-position: center; border-radius: 8px;">
                                 <div class="p-4">
