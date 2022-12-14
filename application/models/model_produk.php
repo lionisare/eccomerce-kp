@@ -69,12 +69,7 @@ class Model_produk extends CI_Model
     }
     public function hitungdata()
     {
-        $query = $this->db->get('tb_produk');
-        if ($query->num_rows() > 0) {
-            return $query->num_rows();
-        } else {
-            return 0;
-        }
+        return $this->db->get('tb_produk')->num_rows();
     }
     public function tampil_saran()
     {
@@ -89,5 +84,12 @@ class Model_produk extends CI_Model
     {
         $this->db->where($where);
         $this->db->delete($table);
+    }
+    public function get_Keyword($keyword)
+    {
+        $this->db->select('*');
+        $this->db->from('tb_produk');
+        $this->db->like('nama_brg', $keyword);
+        return $this->db->get()->result();
     }
 }

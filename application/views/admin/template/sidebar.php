@@ -89,16 +89,15 @@
                                 </a>
                             </li>
                             <form class="form-inline">
-                                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                                    <i class="fa fa-user" aria-hidden="true" href=""></i>
+                                <button type="button" class="btn btn-danger">
+                                    <?php if ($this->session->userdata('username')) {
+                                    ?>
+                                        <li><?= $this->session->userdata('username') ?></li>
+                                        <li class="ml-3"><?= anchor('auth/logout', 'logout');  ?></li>
+                                    <?php  } else { ?>
+                                        <li><?= anchor('auth/login', 'Login'); ?></li>
+                                    <?php }  ?>
                                 </button>
-                                <?php if ($this->session->userdata('username')) {
-                                ?>
-                                    <li><?= $this->session->userdata('username') ?></li>
-                                    <li class="ml-3"><?= anchor('auth/logout', 'logout');  ?></li>
-                                <?php  } else { ?>
-                                    <li><?= anchor('auth/login', 'Login'); ?></li>
-                                <?php }  ?>
                             </form>
                         </ul>
                     </div>

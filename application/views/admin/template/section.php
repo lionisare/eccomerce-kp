@@ -303,30 +303,3 @@
     </div>
 </section>
 <!-- end why section -->
-
-<!-- arrival section -->
-<section class="arrival_section">
-    <div class="container">
-        <div class="box">
-            <div class="arrival_bg_box">
-                <img src="<?php echo base_url() ?>assets/assets-1/images/arrival-bg.png" alt="">
-            </div>
-            <div class="row">
-                <div class="col-md-6 ml-auto">
-                    <div class="heading_container remove_line_bt">
-                        <h2>
-                            Pendatang Baru
-                        </h2>
-                    </div>
-                    <p style="margin-top: 20px;margin-bottom: 30px;">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate magni nostrum est unde illo mollitia quaerat praesentium atque in rerum repellendus a molestiae quod, animi aliquam consequatur optio ex saepe.
-                    </p>
-                    <a href="">
-                        Belanja Sekarang
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end arrival section -->

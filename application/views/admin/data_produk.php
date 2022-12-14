@@ -37,6 +37,7 @@
         <?php endforeach; ?>
         <?= $this->session->flashdata('pesan') ?>
     </table>
+    <?= $this->pagination->create_links(); ?>
 </div>
 
 <!-- tambah data -->
