@@ -31,28 +31,6 @@
                         <label for="">No Telepon</label>
                         <input class="form-control" type="number" name="no_telp" id="" placeholder="No Telpon Aktif/WA" required>
                     </div>
-                    <div>
-                        <label for="">Jasa Pengiriman</label>
-                        <Select class="form-control" required>
-                            <option value="">Silakan pilih</option>
-                            <option value="">POS Indonesia</option>
-                            <option value="">JNE</option>
-                            <option value="">JNT</option>
-                            <option value="">Gojek</option>
-                            <option value="">GRAB</option>
-                        </Select>
-                    </div>
-                    <div>
-                        <label>Pembayaran Melalui</label>
-                        <Select class="form-control" required>
-                            <option value="">Silakan pilih</option>
-                            <option value="">BRI</option>
-                            <option value="">BJB</option>
-                            <option value="">BNI</option>
-                            <option value="">OVO</option>
-                            <option value="">DANA</option>
-                        </Select>
-                    </div>
                     <br>
                     <button type="submit" class="btn btn-primary btn-sm">Pesan</button>
                     <a class="btn btn-success btn-sm" href="https://api.whatsapp.com/send?phone=<?= $whatsapp['nilai'] ?>&text=<?= $whatsapp_message['nilai'] ?>" target="_blank">Pesan Via WA</a>

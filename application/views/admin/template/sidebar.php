@@ -25,11 +25,16 @@
                             <li class="nav-item <?= $this->uri->segment('2') == 'tampil_produk' ? 'active' : '' ?>">
                                 <a class="nav-link" href="<?= base_url('tampil_produk/tampil_produk') ?>">Produk</a>
                             </li>
-                            <li class="nav-item <?= $this->uri->segment('3') == 'proses_konfirmasi' ? 'active' : '' ?>">
-                                <a class="nav-link" href="<?= base_url('konfirmasi/proses_konfirmasi') ?>">Konfirmasi Pembayaran</a>
-                            </li>
-                            <li class="nav-item <?= $this->uri->segment('4') == 'ongkir' ? 'active' : '' ?>">
-                                <a class="nav-link" href="<?= base_url('ongkir') ?>">Cek Ongkir</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Pembayaran<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="<?= base_url('konfirmasi/proses_konfirmasi') ?>">Konfirmasi Pembayaran</a>
+                                    </li>
+                                    <li>
+                                        <a href="<?= base_url('ongkir') ?>">Cek Ongkir</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= base_url('dasboard/detail_keranjang') ?>">

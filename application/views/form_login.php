@@ -13,7 +13,8 @@
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Log in</h1>
+                                        <h1 class="text-gray-900 mb-4">Selamat Datang Di Toko Wangunsari</h1>
+                                        <h4 class="text-gray-900 mb-4">Silakan Login</h4>
                                     </div>
                                     <?= $this->session->flashdata('pesan') ?>
                                     <form class="user" method="post" action="<?php base_url('auth/login') ?>">

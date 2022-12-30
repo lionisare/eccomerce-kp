@@ -9,7 +9,8 @@
                     <div class="col-lg">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Daftar Akun</h1>
+                                <h1 class="text-gray-900 mb-4">Selamat Datang Di Toko Wangunsari</h1>
+                                <h5 class="text-gray-900 mb-4">Silakan Daftar Akun Anda</h5>
                             </div>
                             <form class="user" method="post" action="<?= base_url('registrasi/index') ?>">
                                 <div class="form-group">
