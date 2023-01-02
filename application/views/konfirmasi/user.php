@@ -12,7 +12,7 @@
                 <form action="<?= base_url() . '/Konfirmasi/tambah_konfirmasi'; ?>" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="">Nama</label>
-                        <input class="form-control" type="text" name="nama" id="" placeholder="Nama sesuai rekening" required>
+                        <input class="form-control" type="text" name="nama_konfirmasi" id="" placeholder="Nama sesuai rekening" required>
                     </div>
                     <div class="form-group">
                         <label for="">Asal Bank</label>

@@ -23,7 +23,7 @@ class Konfirmasi extends CI_Controller
     }
     public function tambah_konfirmasi()
     {
-        $nama   = $this->input->post('nama');
+        $nama_konfirmasi   = $this->input->post('nama_konfirmasi');
         $dari_bank = $this->input->post('dari_bank');
         $ke_bank   = $this->input->post('ke_bank');
         $jumlah      = $this->input->post('jumlah');
@@ -41,7 +41,7 @@ class Konfirmasi extends CI_Controller
             }
         }
         $data = array(
-            'nama' => $nama,
+            'nama_konfirmasi' => $nama_konfirmasi,
             'dari_bank' => $dari_bank,
             'ke_bank' => $ke_bank,
             'jumlah' => $jumlah,

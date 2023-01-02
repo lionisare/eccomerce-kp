@@ -18,7 +18,7 @@
                                     Toko Wangunsari
                                 </h1>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et consectetur alias voluptatem, tempora ex, est libero saepe pariatur ad facilis culpa earum fugit porro aspernatur eaque doloremque consequuntur ducimus debitis
+                                    Toko Wangunsari adalah online shop milik Desa Wangunsari yang menjual, memasarkan, dan mempromosikan hasil Dari Usaha Menengah Kecil Mikro (UMKM) yang di miliki Desa Wangunsari, Kecamatan Lembang, Kabupaten Bandung Barat.
                                 </p>
                                 <div class="btn-box">
                                     <a href="" class="btn1">
@@ -39,13 +39,12 @@
                                     <span>
                                         Menjual Produk UMKM
                                     </span>
-                                    Desa Wangunsari
+                                    Desa Wangunsari, Kec.Lembang, Kab.Bandung Barat
                                 </h1>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et consectetur alias voluptatem, tempora ex, est libero saepe pariatur ad facilis culpa earum fugit porro aspernatur eaque doloremque consequuntur ducimus debitis
                                 </p>
                                 <div class="btn-box">
-                                    <a href="" class="btn1">
+                                    <a href="<?= base_url('tampil_produk/tampil_produk') ?>" class="btn1">
                                         Belanja Sekarang
                                     </a>
                                 </div>
