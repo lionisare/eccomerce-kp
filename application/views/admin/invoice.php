@@ -4,16 +4,17 @@
         <thead class="thead-dark">
             <?= $this->session->flashdata('pesan') ?>
             <tr>
-                <th>Id Pemesanan</th>
+                <th>NO</th>
                 <th>Nama Pemesan</th>
                 <th>Alamat Pengiriman</th>
                 <th>Tanggal Pemesanan</th>
                 <th>Batas Pembayaran</th>
                 <th>Aksi</th>
             </tr>
+            <?php $no = 1; ?>
             <?php foreach ($invoice as $inv) : ?>
                 <tr>
-                    <td><?= $inv->id_invoice ?></td>
+                    <td><?= $no++ ?></td>
                     <td><?= $inv->nama ?></td>
                     <td><?= $inv->alamat ?></td>
                     <td><?= $inv->tgl_pesan ?></td>

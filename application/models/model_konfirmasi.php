@@ -40,4 +40,9 @@ class Model_konfirmasi extends CI_Model
             return false;
         }
     }
+    public function delete_data($where, $table)
+    {
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
 }

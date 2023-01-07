@@ -104,7 +104,7 @@ class Data_produk extends CI_Controller
         $where = array('id_brg' => $id);
         $this->model_produk->delete_data($where, 'tb_produk');
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            Berhasil delete produk
+            Berhasil hapus produk
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>

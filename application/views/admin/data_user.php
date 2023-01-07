@@ -5,18 +5,20 @@
             <tr>
                 <th>NO</th>
                 <th>Nama</th>
-                <th>Saran</th>
+                <th>Username</th>
+                <th>Password</th>
                 <th>Aksi</th>
             </tr>
         </thead>
         <?php $no = 1;
-        foreach ($saran as $srn) : ?>
+        foreach ($users as $user) : ?>
             <tr>
                 <td><?= $no++ ?></td>
-                <td><?= $srn->nama ?></td>
-                <td><?= $srn->saran ?></td>
+                <td><?= $user->nama ?></td>
+                <td><?= $user->username ?></td>
+                <td><?= $user->password ?></td>
                 <td>
-                    <?= anchor('admin/data_saran/delete/' . $srn->id, '<div class="btn btn-danger btn-sm">Hapus
+                    <?= anchor('admin/data_user/delete/' . $user->id, '<div class="btn btn-danger btn-sm">Hapus
                     </div>') ?>
                 </td>
             </tr>

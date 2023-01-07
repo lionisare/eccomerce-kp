@@ -4,7 +4,9 @@
             <h2>
                 Konfirmasi <span>Pembayaran</span>
             </h2>
+            <h6 class="alert alert-info">Jika ingin melakukan pembayaran, silakan cek ongkos kirim terlebih dahulu di menu pembayaran selanjutnya pilih cek ongkir</h6>
         </div>
+        <br>
         <di class="row">
             <div class="col-md-2">
             </div>

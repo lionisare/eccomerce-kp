@@ -22,9 +22,8 @@
                 <td><?= $pdk->harga ?></td>
                 <td><?= $pdk->stok ?></td>
                 <td>
-                    <?= anchor('admin/data_produk/detail/' . $pdk->id_brg, '<div class="btn btn-success btn-sm">Detail
+                    <?= anchor('admin/data_produk/detail/' . $pdk->id_brg, '<div class="btn btn-info btn-sm">Detail
                     </div>') ?>
-                </td>
                 <td>
                     <?= anchor('admin/data_produk/edit/' . $pdk->id_brg, '<div class="btn btn-warning btn-sm">Edit
                     </div>') ?>

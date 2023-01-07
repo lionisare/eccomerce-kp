@@ -24,9 +24,14 @@
                     <span>Dashboard</span></a>
             </li>
             <!-- Nav Item - Tables -->
+            <li class="nav-item <?= $this->uri->segment('2') == 'data_user' ? 'active' : '' ?>">
+                <a class="nav-link" href="<?= base_url('admin/data_user') ?>">
+                    <i class='bx bxs-user'></i>
+                    <span>Data User</span></a>
+            </li>
             <li class="nav-item <?= $this->uri->segment('2') == 'data_produk' ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= base_url('admin/data_produk') ?>">
-                    <i class='bx bxs-data'></i>
+                    <i class='bx bxl-product-hunt'></i>
                     <span>Data Produk</span></a>
             </li>
             <li class="nav-item  <?= $this->uri->segment('2') == 'invoice' ? 'active' : '' ?>">
@@ -36,7 +41,7 @@
             </li>
             <li class="nav-item  <?= $this->uri->segment('2') == 'data_kategori' ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= base_url('admin/data_kategori') ?>">
-                    <i class='bx bxs-file'></i>
+                    <i class='bx bxs-category'></i>
                     <span>Data Kategori</span></a>
             </li>
             <li class="nav-item <?= $this->uri->segment('2') == 'konfirmasi' ? 'active' : '' ?>">
@@ -45,16 +50,16 @@
                     <span>Konfirmasi Pembayaran</span>
                 </a>
             </li>
-            <li class="nav-item <?= $this->uri->segment('2') == 'pengaturan' ? 'active' : '' ?>">
-                <a class="nav-link " href="<?= base_url('admin/pengaturan') ?>">
-                    <i class='bx bxs-chip'></i>
-                    <span>Pengaturan</span></a>
-            </li>
             <li class="nav-item <?= $this->uri->segment('2') == 'saran' ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= base_url('admin/data_saran') ?>">
                     <i class='bx bxs-file'></i>
                     <span>Data saran</span>
                 </a>
+            </li>
+            <li class="nav-item <?= $this->uri->segment('2') == 'pengaturan' ? 'active' : '' ?>">
+                <a class="nav-link " href="<?= base_url('admin/pengaturan') ?>">
+                    <i class='bx bxs-chip'></i>
+                    <span>Pengaturan</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

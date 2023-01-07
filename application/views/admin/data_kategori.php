@@ -15,9 +15,9 @@
                     <td><?= $no++ ?></td>
                     <td><?= $ktr->nama_kategori ?></td>
                     <td>
-                        <?= anchor('admin/data_kategori/edit_kategori/' . $ktr->kategori_id, '<div class="btn btn-warning btn-sm"><i class="bx bxs-edit" ></i>
+                        <?= anchor('admin/data_kategori/edit_kategori/' . $ktr->kategori_id, '<div class="btn btn-warning btn-sm">Edit
                     </div>') ?>
-                        <?= anchor('admin/data_kategori/delete_kategori/' . $ktr->kategori_id, '<div class="btn btn-danger btn-sm"><i class="bx bxs-trash"></i>
+                        <?= anchor('admin/data_kategori/delete_kategori/' . $ktr->kategori_id, '<div class="btn btn-danger btn-sm">Hapus
                     </div>') ?>
                     </td>
                 </tr>

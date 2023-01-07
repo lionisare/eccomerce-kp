@@ -30,4 +30,18 @@ class Model_auth extends CI_Model
     {
         $this->db->insert($table, $data);
     }
+    public function tampil_user()
+    {
+        $result = $this->db->get('tb_user');
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return false;
+        }
+    }
+    public function delete_user($where, $table)
+    {
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
 }

@@ -1,6 +1,6 @@
 <?php
 
-class Invoice extends CI_Controller
+class Data_user extends CI_Controller
 {
   public function __construct()
   {
@@ -17,31 +17,22 @@ class Invoice extends CI_Controller
   }
   public function index()
   {
-    $data['invoice'] = $this->model_invoice->tampil_data();
+    $data['users'] = $this->model_auth->tampil_user();
     $this->load->view('admin/template_admin/header');
     $this->load->view('admin/template_admin/sidebar');
-    $this->load->view('admin/invoice', $data);
+    $this->load->view('admin/data_user', $data);
     $this->load->view('admin/template_admin/footer');
   }
-  public function detail($id_invoice)
+  public function delete($id)
   {
-    $data['invoice'] = $this->model_invoice->ambil_id_invoice($id_invoice);
-    $data['pesanan'] = $this->model_invoice->ambil_id_pesanan($id_invoice);
-    $this->load->view('admin/template_admin/header');
-    $this->load->view('admin/template_admin/sidebar');
-    $this->load->view('admin/detail_invoice', $data);
-    $this->load->view('admin/template_admin/footer');
-  }
-  public function hapus($id)
-  {
-    $where = array('id_invoice' => $id);
-    $this->model_produk->delete_data($where, 'tb_invoices');
+    $where = array('id' => $id);
+    $this->model_auth->delete_user($where, 'tb_user');
     $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            Berhasil hapus pesanan
+            Berhasil hapus user
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>');
-    redirect('admin/invoice');
+    redirect('admin/data_user/index');
   }
 }

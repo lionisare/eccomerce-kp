@@ -57,7 +57,7 @@ class Data_kategori extends CI_Controller
     $where = array('kategori_id' => $id);
     $this->model_categori->delete_data($where, 'tb_kategori');
     $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            Berhasil delete kategori
+            Berhasil hapus kategori
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
