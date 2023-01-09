@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <?= $this->session->flashdata('pesan') ?>
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-8">
             <div class="card">
                 <div class="card-header">
                     <h5>Pengaturan Nomor Whatsapp</h5>

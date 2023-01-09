@@ -44,6 +44,11 @@
                     <i class='bx bxs-category'></i>
                     <span>Data Kategori</span></a>
             </li>
+            <li class="nav-item  <?= $this->uri->segment('2') == 'data_pembayaran' ? 'active' : '' ?>">
+                <a class="nav-link" href="<?= base_url('admin/data_pembayaran') ?>">
+                    <i class='bx bxs-wallet'></i>
+                    <span>Data Pembayaran</span></a>
+            </li>
             <li class="nav-item <?= $this->uri->segment('2') == 'konfirmasi' ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= base_url('admin/konfirmasi') ?>">
                     <i class='bx bxs-wallet'></i>

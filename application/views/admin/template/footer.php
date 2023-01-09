@@ -5,7 +5,7 @@
                   <div class="col-md-4">
                      <div class="full">
                         <div class="logo_footer">
-                           <a href="<?= base_url('welcome') ?>">Toko Wangunsari</a>
+                           <a href="<?= base_url('welcome') ?>"><img class="justify-content-end" src="assets/img/logo.png"></a>
                         </div>
                         <div class="information_f">
                            <p><strong>Desa Wangunsari</strong></p>
@@ -27,6 +27,7 @@
                                        <li><a href="<?= base_url('tampil_produk/tampil_produk') ?>">Produk</a>
                                        </li>
                                        <li><a href="<?= base_url('konfirmasi/proses_konfirmasi') ?>">Konfirmasi Pembayaran</a></li>
+                                       <li><a href="<?= base_url('Ongkir') ?>">Cek Ongkos Kirim</a></li>
                                        <li><a href="<?= base_url('dasboard/detail_keranjang') ?>">Keranjang</a></li>
                                     </ul>
                                  </div>

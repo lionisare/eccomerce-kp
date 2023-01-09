@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Custom fonts for this template-->
     <link rel="shortcut icon" href=" <?php echo base_url() ?>assets/assets-1/images/icon.png" type="">
-    <title>Toko Desa Wangunsari</title>
+    <title>Toko Wangunsari</title>
     <!-- responsive (style old template style) -->
     <link href=" <?php echo base_url() ?>assets/assets-1/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <!-- font awesome style -->

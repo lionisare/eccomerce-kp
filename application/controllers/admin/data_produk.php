@@ -80,12 +80,13 @@ class Data_produk extends CI_Controller
         $kategori_id = $this->input->post('kategori_id');
         $harga       = $this->input->post('harga');
         $stok        = $this->input->post('stok');
+
         $data = array(
             'nama_brg' => $nama_brg,
             'keterangan' => $keterangan,
             'kategori_id' => $kategori_id,
             'harga' => $harga,
-            'stok' => $stok
+            'stok' => $stok,
         );
         $where = array(
             'id_brg' => $id

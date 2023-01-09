@@ -51,7 +51,7 @@ class Konfirmasi extends CI_Controller
         );
         $this->model_konfirmasi->konfirmasi_user($data, 'tb_konfirmasi');
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            Berhasil melakukan konfirmasi pembayaran
+            Berhasil melakukan konfirmasi pembayaran & Selanjutnya kami akan menginformasikan pesanan anda melalui Email atau WA yang terdaftar
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>

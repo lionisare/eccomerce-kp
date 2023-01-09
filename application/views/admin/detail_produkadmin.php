@@ -34,10 +34,11 @@
                                     </strong></td>
                             </tr>
                         </table>
-                        <!-- <?= anchor('dasboard/tambah_keranjang/' . $pdk->id_brg, '<div class="btn btn-primary btn-sm">Tambah Ke keranjang</div>') ?> -->
-                        <!-- <?= anchor('dasboard/index/', '<div class="btn btn-danger btn-sm">Kembali</div>') ?> -->
                     </div>
                 </div>
+                <a href="<?= base_url('admin/data_produk/index') ?>">
+                    <div class="btn btn-primary btn-sm">Kembali</div>
+                </a>
             <?php endforeach; ?>
         </div>
     </div>

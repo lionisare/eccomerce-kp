@@ -1,5 +1,8 @@
 <div class="container-fluid">
     <h4>Edit Data Produk</h4>
+    <a href="<?= base_url('admin/data_produk/index') ?>">
+        <div class="btn btn-primary btn-sm">Kembali</div>
+    </a>
     <?php foreach ($produk as $pdk) : ?>
         <form action="<?= base_url() . 'admin/data_produk/update' ?>" method="post">
             <div class="form-group">
@@ -27,6 +30,10 @@
             <div class="form-group">
                 <label>Stok</label>
                 <input type="text" name="stok" class="form-control" value="<?= $pdk->stok ?>">
+            </div>
+            <div class="card col-md-4">
+                <label>Gambar</label>
+                <img src="<?= base_url() . '/upload/' . $pdk->gambar ?>" alt="gambar" class="w-100">
             </div>
             <button type="submit" class="btn btn-success btn-sm mt-2">Update</button>
         </form>
