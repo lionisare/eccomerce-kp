@@ -16,38 +16,52 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
             <!-- Nav Item - Dashboard -->
             <li class="nav-item <?= $this->uri->segment('2') == 'admin_dasboard' ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= base_url('admin/admin_dasboard') ?>">
                     <i class='bx bxs-dashboard'></i>
                     <span>Dashboard</span></a>
             </li>
-            <!-- Nav Item - Tables -->
-            <li class="nav-item <?= $this->uri->segment('2') == 'data_user' ? 'active' : '' ?>">
-                <a class="nav-link" href="<?= base_url('admin/data_user') ?>">
-                    <i class='bx bxs-user'></i>
-                    <span>Data User</span></a>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <!-- baru  -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="bx bxs-data"></i>
+                    <span>Data Produk DLL</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">data - data:</h6>
+                        <a class="collapse-item" href="<?= base_url('admin/data_user') ?>">
+                            <i class='bx bxs-user'></i>
+                            <span>Data User</span>
+                        </a>
+                        <a class="collapse-item" href="<?= base_url('admin/data_produk') ?>">
+                            <i class='bx bxl-product-hunt'></i>
+                            <span>Data Produk</span>
+                        </a>
+                        <a class="collapse-item" href="<?= base_url('admin/data_kategori') ?>">
+                            <i class='bx bxs-category'></i>
+                            <span>Data Kategori</span>
+                        </a>
+                        <a class="collapse-item" href="<?= base_url('admin/data_pembayaran') ?>">
+                            <i class='bx bxs-wallet'></i>
+                            <span>Data Metode Pembayaran</span>
+                        </a>
+                        <a class="collapse-item" href="<?= base_url('admin/data_saran') ?>">
+                            <i class='bx bxs-file'></i>
+                            <span>Data saran</span>
+                        </a>
+                    </div>
+                </div>
             </li>
-            <li class="nav-item <?= $this->uri->segment('2') == 'data_produk' ? 'active' : '' ?>">
-                <a class="nav-link" href="<?= base_url('admin/data_produk') ?>">
-                    <i class='bx bxl-product-hunt'></i>
-                    <span>Data Produk</span></a>
-            </li>
+            <!-- baru  -->
+            <hr class="sidebar-divider">
             <li class="nav-item  <?= $this->uri->segment('2') == 'invoice' ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= base_url('admin/invoice') ?>">
                     <i class='bx bxs-file'></i>
                     <span>Data Pemesanan</span></a>
-            </li>
-            <li class="nav-item  <?= $this->uri->segment('2') == 'data_kategori' ? 'active' : '' ?>">
-                <a class="nav-link" href="<?= base_url('admin/data_kategori') ?>">
-                    <i class='bx bxs-category'></i>
-                    <span>Data Kategori</span></a>
-            </li>
-            <li class="nav-item  <?= $this->uri->segment('2') == 'data_pembayaran' ? 'active' : '' ?>">
-                <a class="nav-link" href="<?= base_url('admin/data_pembayaran') ?>">
-                    <i class='bx bxs-wallet'></i>
-                    <span>Data Pembayaran</span></a>
             </li>
             <li class="nav-item <?= $this->uri->segment('2') == 'konfirmasi' ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= base_url('admin/konfirmasi') ?>">
@@ -55,17 +69,13 @@
                     <span>Konfirmasi Pembayaran</span>
                 </a>
             </li>
-            <li class="nav-item <?= $this->uri->segment('2') == 'saran' ? 'active' : '' ?>">
-                <a class="nav-link" href="<?= base_url('admin/data_saran') ?>">
-                    <i class='bx bxs-file'></i>
-                    <span>Data saran</span>
+            <li class="nav-item <?= $this->uri->segment('2') == 'pengaturan' ? 'active' : '' ?>">
+                <a class="nav-link" href="<?= base_url('admin/pengaturan') ?>">
+                    <i class='bx bxs-chip'></i>
+                    <span>Pengaturan</span>
                 </a>
             </li>
-            <li class="nav-item <?= $this->uri->segment('2') == 'pengaturan' ? 'active' : '' ?>">
-                <a class="nav-link " href="<?= base_url('admin/pengaturan') ?>">
-                    <i class='bx bxs-chip'></i>
-                    <span>Pengaturan</span></a>
-            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -89,11 +99,6 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
-                    <!-- Topbar Search -->
-
-
-                    <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
@@ -124,8 +129,5 @@
                                 <li><?= anchor('auth/login', 'Login'); ?></li>
                             <?php }  ?>
                         </ul>
-
-                    </ul>
-
                 </nav>
                 <!-- End of Topbar -->

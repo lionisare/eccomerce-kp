@@ -38,9 +38,11 @@ class Data_pembayaran extends CI_Controller
   public function tambah_metode()
   {
     $nama_bank   = $this->input->post('nama_bank');
+    $no_rekening   = $this->input->post('no_rekening');
     $nama_rekening   = $this->input->post('nama_rekening');
     $data = array(
       'nama_bank' => $nama_bank,
+      'no_rekening' => $no_rekening,
       'nama_rekening' => $nama_rekening
     );
     $this->model_auth->tambah_metode($data, 'tb_pembayaran');
@@ -65,9 +67,11 @@ class Data_pembayaran extends CI_Controller
   {
     $id              = $this->input->post('id');
     $nama_bank       = $this->input->post('nama_bank');
+    $no_rekening       = $this->input->post('no_rekening');
     $nama_rekening   = $this->input->post('nama_rekening');
     $data = array(
       'nama_bank' => $nama_bank,
+      'no_rekening' => $no_rekening,
       'nama_rekening' => $nama_rekening
     );
     $where = array(

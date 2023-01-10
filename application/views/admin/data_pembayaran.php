@@ -6,6 +6,7 @@
             <tr>
                 <th>NO</th>
                 <th>Nama Bank</th>
+                <th>No Rekening</th>
                 <th>Nama Rekening</th>
                 <th colspan="2">Aksi</th>
             </tr>
@@ -15,6 +16,7 @@
             <tr>
                 <td><?= $no++ ?></td>
                 <td><?= $bayar->nama_bank ?></td>
+                <td><?= $bayar->no_rekening ?></td>
                 <td><?= $bayar->nama_rekening ?></td>
                 <td>
                     <?= anchor('admin/data_pembayaran/edit_metode/' . $bayar->id, '<div class="btn btn-warning btn-sm">Edit
@@ -41,42 +43,16 @@
             <div class="modal-body">
                 <form action="<?= base_url() . 'admin/data_pembayaran/tambah_metode'; ?>" method="post" enctype="multipart/form-data">
                     <div class="from-group">
-                        <label for="">Nama Bank & No Rekening</label>
+                        <label for="">Nama Bank</label>
                         <input type="text" name="nama_bank" class="form-control" required>
+                    </div>
+                    <div class="from-group">
+                        <label for="">No Rekening</label>
+                        <input type="text" name="no_rekening" class="form-control" required>
                     </div>
                     <div class="from-group">
                         <label for="">Nama Rekening</label>
                         <input type="text" name="nama_rekening" class="form-control" required>
-                    </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-success">Simpan</button>
-            </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-<!-- edit data  -->
-<div class="modal fade" id="edit_metode" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Produk</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="<?= base_url() . 'admin/data_pembayaran/edit_metode'; ?>" method="post" enctype="multipart/form-data">
-                    <div class="from-group">
-                        <label for="">Nama Bank & No Rekening</label>
-                        <input type="text" name="nama_bank" value="<?= $bayar->nama_bank ?>" class="form-control" required>
-                    </div>
-                    <div class="from-group">
-                        <label for="">Nama Rekening</label>
-                        <input type="text" name="nama_rekening" value="<?= $bayar->nama_rekening ?>" class="form-control" required>
                     </div>
             </div>
             <div class="modal-footer">

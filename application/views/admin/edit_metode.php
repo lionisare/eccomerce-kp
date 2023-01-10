@@ -8,6 +8,10 @@
                 <input type="text" name="nama_bank" class="form-control" value="<?= $bayar->nama_bank ?>" required>
             </div>
             <div class="from-group">
+                <label for="">No Rekening</label>
+                <input type="text" name="no_rekening" class="form-control" value="<?= $bayar->no_rekening ?>" required>
+            </div>
+            <div class="from-group">
                 <label for="">Nama Rekening</label>
                 <input type="text" name="nama_rekening" class="form-control" value="<?= $bayar->nama_rekening ?>" required>
             </div>

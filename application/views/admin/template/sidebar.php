@@ -34,6 +34,9 @@
                                     <li>
                                         <a href="<?= base_url('ongkir') ?>">Cek Ongkir</a>
                                     </li>
+                                    <li>
+                                        <a href="<?= base_url('info_pembayaran/info') ?>">Info Bank</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
